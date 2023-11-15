@@ -416,17 +416,18 @@
 
                 </div>
 
-                <form action="">
+                <form  id="myForm" action="https://formspree.io/f/xnqkyddd"
+                method="POST">
                     <div class="input-wrap">
                         <input type="text" placeholder="Your Name *">
                         <input type="email" placeholder="Your Email *">
                     </div>
                     <div class="input-wrap-2">
-                        <input type="text" placeholder="Your Subject...">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                        <input type="text"  name="subject" placeholder="Your Subject...">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
                     </div>
                     <div class="btn-wrapper">
-                        <button class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -445,6 +446,17 @@
             </div>
         </footer>
     </div>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+          // You can perform any necessary form submission logic here
+          // Make sure to include your form data processing, such as sending data to FormsFree
+    
+          // After successful submission, reset the form
+          setTimeout(function() {
+            document.getElementById("myForm").reset();
+          }, 1000); // Delay the reset for 1 second (adjust the delay as needed)
+        });
+      </script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
